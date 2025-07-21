@@ -19,7 +19,7 @@ if tickers_input:
     end_date = datetime.datetime.today()
     start_date = end_date - datetime.timedelta(days=365)
 
-    data = yf.download(tickers, start=start_date, end=end_date)["Adj Close"]
+    data = yf.download(tickers, start=start_date, end=end_date)["Close"]
 
     if len(tickers) == 1:
         data = data.to_frame()
